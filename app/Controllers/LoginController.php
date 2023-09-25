@@ -6,8 +6,20 @@ use App\Controllers\BaseController;
 
 class LoginController extends BaseController
 {
-    public function index()
+    public function username ()
     {
-        //
+
+    }
+    public function masukan_password ()
+    {
+
+    }
+    public function lupa_password ()
+    {
+
+    }
+    public function get_started ()
+    {
+        
     }
 }
