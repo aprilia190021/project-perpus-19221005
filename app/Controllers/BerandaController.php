@@ -10,4 +10,16 @@ class BerandaController extends BaseController
     {
         //
     }
+     public function home()
+    {
+        //
+    }
+     public function about()
+    {
+        //
+    }
+     public function profile()
+    {
+        //
+    }
 }
