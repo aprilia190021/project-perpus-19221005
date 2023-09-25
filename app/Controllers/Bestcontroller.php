@@ -4,12 +4,12 @@ namespace App\Controllers;
 
 class Logincontroller extends BaseController
 {
-    public function username ()
+    public function tampilan_login ()
 
     {
 
     }
-    public function login ()
+    public function username ()
     {
 
     }
@@ -26,3 +26,4 @@ class Logincontroller extends BaseController
 
     }
 }
+
