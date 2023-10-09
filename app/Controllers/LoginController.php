@@ -4,22 +4,23 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class KategoriController extends BaseController
+class LoginController extends BaseController
 {
     public function index()
     {
         //
     }
-    public function novel()
+    public function masuk()
     {
         //
     }
-    public function majalah()
+     public function daftar()
     {
         //
     }
-    public function kamus()
+     public function lupa_passwoard()
     {
         //
     }
 }
+?>
