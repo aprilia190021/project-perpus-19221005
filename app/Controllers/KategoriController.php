@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-<<<<<<< HEAD
+<<< HEAD
 class Kategoricontroller extends BaseController
 {
     public function daftar_kategori ()
@@ -33,9 +33,8 @@ Class Kategoricontroller extends BaseController
     {
 
     }
-    public function deskripsi()
+    public function deskripsi () 
     {
-
+        
     }
 }
->>>>>>> bea5a59058958537b4a18945b8ba3a986ad890d2

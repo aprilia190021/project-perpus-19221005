@@ -22,7 +22,6 @@ class UserController extends Controller
         ];
 
         $builder = $this->db->table('tb_pengguna');
-        $builder->where('id', $id);
         $builder->update($data);
 
         return $this->db->affectedRows();
