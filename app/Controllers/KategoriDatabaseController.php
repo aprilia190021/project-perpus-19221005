@@ -1,7 +1,7 @@
 <?php
 // Koneksi ke database
 $servername = "sql"; 
-$database = "nama_database";
+$database = "perpustakaan_19220993";
 
 $conn = new mysqli( $database);
 
