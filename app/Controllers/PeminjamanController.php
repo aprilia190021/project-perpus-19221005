@@ -1,4 +1,10 @@
 <?php
+
+namespace App\Controllers;
+
+use App\Controllers\BaseController;
+use App\Models\Peminjaman;
+
 class PeminjamanController extends PeminjamanController
 {
     public function index()

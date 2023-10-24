@@ -1,43 +1,41 @@
 <?php
 
-class User {
-    private $id;
-    private $username;
-    private $email;
-    private $password;
+namespace App\Models;
 
-    public function __construct($username, $email, $password) {
-        $this->username = $username;
-        $this->email = $email;
-        $this->setPassword($password);
-    }
+use CodeIgniter\Model;
 
-    public function getId() {
-        return $this->id;
-    }
+class PenggunaModel extends Model
+{
+    protected $DBGroup          = 'default';
+    protected $table            = 'tb_pengguna';
+    protected $primaryKey       = 'id';
+    protected $useAutoIncrement = true;
+    protected $returnType       = 'array';
+    protected $useSoftDeletes   = false;
+    protected $protectFields    = false;
+    protected $allowedFields    = ['*'];
 
-    public function getUsername() {
-        return $this->username;
-    }
+    // Dates
+    protected $useTimestamps = false;
+    protected $dateFormat    = 'datetime';
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
+    protected $deletedField  = 'deleted_at';
 
-    public function setUsername($username) {
-        $this->username = $username;
-    }
+    // Validation
+    protected $validationRules      = [];
+    protected $validationMessages   = [];
+    protected $skipValidation       = false;
+    protected $cleanValidationRules = true;
 
-    public function getEmail() {
-        return $this->email;
-    }
-
-    public function setEmail($email) {
-        $this->email = $email;
-    }
-
-    public function setPassword($password) {
-        // Anda harus menghash kata sandi sebelum menyimpannya ke basis data
-        $this->password = password_hash($password, PASSWORD_BCRYPT);
-    }
-
-    public function verifyPassword($password) {
-        return password_verify($password, $this->password);
-    }
+    // Callbacks
+    protected $allowCallbacks = true;
+    protected $beforeInsert   = [];
+    protected $afterInsert    = [];
+    protected $beforeUpdate   = [];
+    protected $afterUpdate    = [];
+    protected $beforeFind     = [];
+    protected $afterFind      = [];
+    protected $beforeDelete   = [];
+    protected $afterDelete    = [];
 }

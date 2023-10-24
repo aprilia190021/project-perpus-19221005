@@ -1,9 +1,9 @@
 <?php
 // Konfigurasi koneksi database
 $servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "nama_database";
+$username = "root";
+$password = "";
+$dbname = "Perpustakaan_19220993";
 
 // Membuat koneksi
 $conn = new mysqli($servername, $username, $password, $dbname);

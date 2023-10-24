@@ -1,27 +1,41 @@
 <?php
-class Peminjaman {
-    private $id;
-    private $tgl_peminjaman;
-    private $tgl_pengembalian;
-    private $tb_pengguna_id_peminjam;
-    private $tb_pengguna_id_pengembalian;
-    private $tb_anggota_id;
-    private $tb_buku_id;
-    private $denda;
 
-    public function __construct($tgl_peminjaman, $tgl_pengembalian, $tb_pengguna_id_peminjam, $tb_pengguna_id_pengembalian, $tb_anggota_id, $tb_buku_id, $denda) {
-        $this->tgl_peminjaman = $tgl_peminjaman;
-        $this->tgl_pengembalian = $tgl_pengembalian;
-        $this->tb_pengguna_id_peminjam = $tb_pengguna_id_peminjam;
-        $this->tb_pengguna_id_pengembalian = $tb_pengguna_id_pengembalian;
-        $this->tb_anggota_id = $tb_anggota_id;
-        $this->tb_buku_id = $tb_buku_id;
-        $this->denda = $denda;
-    }
+namespace App\Models;
 
+use CodeIgniter\Model;
 
-    public function getId() {
-        return $this->id;
-    }
+class PeminjamanModel extends Model
+{
+    protected $DBGroup          = 'default';
+    protected $table            = 'peminjamen';
+    protected $primaryKey       = 'id';
+    protected $useAutoIncrement = true;
+    protected $returnType       = 'array';
+    protected $useSoftDeletes   = false;
+    protected $protectFields    = true;
+    protected $allowedFields    = [];
+
+    // Dates
+    protected $useTimestamps = false;
+    protected $dateFormat    = 'datetime';
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
+    protected $deletedField  = 'deleted_at';
+
+    // Validation
+    protected $validationRules      = [];
+    protected $validationMessages   = [];
+    protected $skipValidation       = false;
+    protected $cleanValidationRules = true;
+
+    // Callbacks
+    protected $allowCallbacks = true;
+    protected $beforeInsert   = [];
+    protected $afterInsert    = [];
+    protected $beforeUpdate   = [];
+    protected $afterUpdate    = [];
+    protected $beforeFind     = [];
+    protected $afterFind      = [];
+    protected $beforeDelete   = [];
+    protected $afterDelete    = [];
 }
-?>
